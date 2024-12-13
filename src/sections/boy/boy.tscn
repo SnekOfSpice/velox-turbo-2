@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkhop01cd1e3q"]
+
+[ext_resource type="Script" path="res://section.gd" id="1_hx63c"]
+
+[node name="Boy" type="Node2D"]
+script = ExtResource("1_hx63c")

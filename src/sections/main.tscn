@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba10pxpi5q7fy"]
+
+[ext_resource type="Script" path="res://src/sections/main.gd" id="1_n8mvk"]
+[ext_resource type="PackedScene" uid="uid://dkhop01cd1e3q" path="res://src/sections/boy/boy.tscn" id="2_t2r7u"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_n8mvk")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sections" type="Node2D" parent="."]
+
+[node name="Boy" parent="Sections" instance=ExtResource("2_t2r7u")]
