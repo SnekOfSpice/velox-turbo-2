@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://ipa310726xyt"]
 
 [ext_resource type="Script" path="res://game/stages/rolling_credits.gd" id="1_cgvis"]
-[ext_resource type="Texture2D" uid="uid://dw2h30iqkt2ng" path="res://game/cg/death.png" id="2_lxphj"]
+[ext_resource type="Texture2D" uid="uid://dp1f8bi0bigr8" path="res://game/cg/death.jpg" id="2_0avb0"]
 [ext_resource type="Texture2D" uid="uid://cvm8mdtorct3r" path="res://game/cg/before.jpg" id="3_v8e8b"]
 [ext_resource type="Texture2D" uid="uid://ceep2ml8kdbla" path="res://game/cg/deathbeforedetransition.jpg" id="4_agrxt"]
 [ext_resource type="Texture2D" uid="uid://ckdbsyj6okq54" path="res://game/cg/we.jpg" id="5_2cr4x"]
@@ -87,7 +87,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("2_lxphj")
+texture = ExtResource("2_0avb0")
 
 [node name="TextureRect2" type="TextureRect" parent="Screens/DeathBeforeDetransition"]
 layout_mode = 1

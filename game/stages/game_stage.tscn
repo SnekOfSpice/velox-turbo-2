@@ -223,9 +223,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -44.0
+offset_left = -125.0
 offset_top = -44.0
-offset_right = 44.0
+offset_right = 125.0
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
@@ -263,6 +263,7 @@ text = "Name Label Here"
 
 [node name="MarginContainer2" type="MarginContainer" parent="Camera2D/CanvasLayer/VNUIRoot/VNUI/TextContainer1/MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 8
 theme_override_constants/margin_left = -9
 
 [node name="Panel" type="PanelContainer" parent="Camera2D/CanvasLayer/VNUIRoot/VNUI/TextContainer1/MarginContainer/VBoxContainer/MarginContainer2"]
@@ -283,10 +284,10 @@ theme_override_constants/margin_bottom = 1
 auto_translate_mode = 1
 custom_minimum_size = Vector2(215, 0)
 layout_mode = 2
+size_flags_vertical = 8
 mouse_filter = 2
 theme_override_fonts/bold_font = ExtResource("2_6jeks")
-text = "Text Body Here
-dghfgh"
+text = "Text Body Here"
 fit_content = true
 scroll_active = false
 

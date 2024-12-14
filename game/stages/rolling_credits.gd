@@ -12,6 +12,7 @@ func _ready() -> void:
 	$White.visible = true
 	$Black.visible = true
 	$Label.visible = true
+	visible = true
 	
 	for screen : Control in $Screens.get_children():
 		for part : TextureRect in screen.get_children():
@@ -19,7 +20,7 @@ func _ready() -> void:
 
 func start():
 	Sound.play_sfx("shutter")
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.5).timeout
 	#Parser.line_reader.instruction_handler.set_sun("steps", 3.7)
 	#await get_tree().create_timer(1.5).timeout
 	#Parser.line_reader.instruction_handler.set_sun("fill_amount", 6.5)
@@ -31,10 +32,11 @@ func start():
 	var black_tween = create_tween()
 	black_tween.tween_property($Black, "modulate:a", 1.0, 0.0)
 	Sound.play_sfx("shutter")
+	GameWorld.game_stage.hide_cg()
 	
 	await black_tween.finished
 	
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(2.0).timeout
 	
 	for screen : Control in $Screens.get_children():
 		for part : TextureRect in screen.get_children():

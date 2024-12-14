@@ -495,18 +495,41 @@
 					{
 						"address": "0.2",
 						"conditionals": {
-							"behavior": 0,
-							"behavior_key": "Show",
+							"behavior": 1,
+							"behavior_key": "Hide",
 							"facts": {
 								"fact_data_by_name": {
-
+									"boy": {
+										"data_type": 0,
+										"fact_name": "boy",
+										"fact_value": true,
+										"int_comparator": 0,
+										"int_operator": 0,
+										"is_conditional": true
+									},
+									"faggot": {
+										"data_type": 0,
+										"fact_name": "faggot",
+										"fact_value": true,
+										"int_comparator": 0,
+										"int_operator": 0,
+										"is_conditional": true
+									},
+									"girl": {
+										"data_type": 0,
+										"fact_name": "girl",
+										"fact_value": true,
+										"int_comparator": 0,
+										"int_operator": 0,
+										"is_conditional": true
+									}
 								},
-								"meta.visible": false
+								"meta.visible": true
 							},
-							"meta.visible": false,
-							"operand": 0,
+							"meta.visible": true,
+							"operand": 1,
 							"operand_args": [],
-							"operand_key": "AND"
+							"operand_key": "OR"
 						},
 						"content": {
 							"delay_after": 0,
@@ -530,7 +553,7 @@
 						},
 						"header": [],
 						"line_type": 2,
-						"meta.conditionals_visible": false,
+						"meta.conditionals_visible": true,
 						"meta.facts_visible": false,
 						"meta.indent_level": 0,
 						"meta.is_head_editable": false,
@@ -542,15 +565,38 @@
 					{
 						"address": "0.3",
 						"conditionals": {
-							"behavior": 0,
-							"behavior_key": "Show",
+							"behavior": 1,
+							"behavior_key": "Hide",
 							"facts": {
 								"fact_data_by_name": {
-
+									"boy": {
+										"data_type": 0,
+										"fact_name": "boy",
+										"fact_value": true,
+										"int_comparator": 0,
+										"int_operator": 0,
+										"is_conditional": true
+									},
+									"faggot": {
+										"data_type": 0,
+										"fact_name": "faggot",
+										"fact_value": true,
+										"int_comparator": 0,
+										"int_operator": 0,
+										"is_conditional": true
+									},
+									"girl": {
+										"data_type": 0,
+										"fact_name": "girl",
+										"fact_value": true,
+										"int_comparator": 0,
+										"int_operator": 0,
+										"is_conditional": true
+									}
 								},
-								"meta.visible": false
+								"meta.visible": true
 							},
-							"meta.visible": false,
+							"meta.visible": true,
 							"operand": 0,
 							"operand_args": [],
 							"operand_key": "AND"
@@ -579,7 +625,7 @@
 						},
 						"header": [],
 						"line_type": 2,
-						"meta.conditionals_visible": false,
+						"meta.conditionals_visible": true,
 						"meta.facts_visible": false,
 						"meta.indent_level": 0,
 						"meta.is_head_editable": false,
@@ -929,7 +975,7 @@
 						}
 					}
 				],
-				"meta.scroll_vertical": 0,
+				"meta.scroll_vertical": 805,
 				"meta.selected": false,
 				"next": 0,
 				"number": 0,
@@ -1014,7 +1060,7 @@
 								"narrator"
 							],
 							"active_actors_title": "character",
-							"content": "[]>narrator:Ever since he was able to think, his brain overflowed with suicide. Visions of his brains splattered on the floor.\n[]>narrator:Wondering if the 5th story of his apartment complex was high enough. First attempt at age 11. \n[]>narrator:Got raped at age 12. \n[]>narrator:Put a knife in someone's stomach at age 13.\n[]>narrator:Correctional facility.\n[]>narrator:Now, he's back out- probation.\n[]>narrator:Guess who won't get touched by a loved one ever again.\n[]>narrator:Still alive. For now.\n[]>narrator:He spends his time in dark alleyways, getting fucked by heterosexual men.\n[]>narrator:None of them consider him one.\n[]>narrator:Barely 17 but we both know he's older than that.\n[]>narrator:First attempt 6 years ago. Perpetual downward spiral. Won't be the only one.\n[]>narrator:The next one will be in three weeks after doing way too much molly.\n[]>narrator:You can guess how the rest of the story goes."
+							"content": "[]>narrator:Ever since he was able to think, his brain overflowed with suicide. Visions of his brains splattered on the floor.\n[]>narrator:Wondering if the 5th story of his apartment complex was high enough. First attempt at age 11. \n[]>narrator:Age 12 - first sexual contact.\n[]>narrator:Still a virgin tho. You're supposed to lose it with someone you like.\n[]>narrator:Pointed a knife at the wrong person at age 13.\n[]>narrator:Guess who won't get touched by a loved one ever again.\n[]>narrator:Still alive. For now.\n[]>narrator:He spends his time in dark alleyways, getting fucked by heterosexual men.\n[]>narrator:None of them consider him one.\n[]>narrator:Barely 17 but we both know he's older than that.\n[]>narrator:First attempt 6 years ago. Perpetual downward spiral. Won't be the only one.\n[]>narrator:The next one will be in three weeks after doing way too much molly.\n[]>narrator:You can guess how the rest of the story goes."
 						},
 						"facts": {
 							"fact_data_by_name": {
@@ -1315,7 +1361,7 @@
 						}
 					}
 				],
-				"meta.scroll_vertical": 0,
+				"meta.scroll_vertical": 936,
 				"meta.selected": false,
 				"next": 0,
 				"number": 1,
@@ -1683,7 +1729,7 @@
 								"narrator"
 							],
 							"active_actors_title": "character",
-							"content": "[]>narrator:Got into bad shit too early. Family didn't know how to handle its coming out and other shit happened that does not concern you or me or it.\n[]>narrator:Dead past.\n[]>narrator:No future.\n[]>narrator:Very presently - Cut up forearms.\n[]>narrator:The faggot's hands are stained. Imagine whatever fluid is most repulsive to you. It has that on its tongue."
+							"content": "[]>narrator:Got into bad shit too early. Family didn't know how to handle its coming out and other shit happened that does not concern you or me or it.\n[]>narrator:Dead past.\n[]>narrator:No future.\n[]>narrator:Very presently - Cut up forearms & chest.\n[]>narrator:The faggot's hands are stained. Imagine whatever fluid is most repulsive to you. It has that on its tongue."
 						},
 						"facts": {
 							"fact_data_by_name": {
@@ -1772,7 +1818,7 @@
 								"narrator"
 							],
 							"active_actors_title": "character",
-							"content": "[]>narrator:It finds comfort in the other faggots, some of them faggots that are girls, some of them girls that are faggots.\n[]>narrator:Estrogen isn't the first injection this one does."
+							"content": "[]>narrator:It finds comfort in the other faggots, some of them faggots that are girls, some of them girls that are faggots.\n[]>narrator:Estrogen isn't the first injection this one does.\n[]>narrator:But it is the best one."
 						},
 						"facts": {
 							"fact_data_by_name": {
@@ -1828,7 +1874,7 @@
 								"narrator"
 							],
 							"active_actors_title": "character",
-							"content": "[]>narrator:T4T is beautiful.\n[]>narrator:Esoteric queer sex is awesome."
+							"content": "[]>narrator:T4T is beautiful.\n[]>narrator:Esoteric queer sex is beautiful.\n[]>narrator:It is here where we are alive. It is here where we will thrive."
 						},
 						"facts": {
 							"fact_data_by_name": {
@@ -1849,6 +1895,53 @@
 					},
 					{
 						"address": "4.1",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"delay_after": 0,
+							"delay_before": 0,
+							"line_reader.args": [
+								"click"
+							],
+							"line_reader.reverse_args": [],
+							"meta.has_reverse": false,
+							"meta.reverse_text": "",
+							"meta.text": "play_sfx(click)",
+							"meta.validation_status": "OK",
+							"name": "play_sfx",
+							"reverse_name": ""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 2,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 1,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "4.2",
 						"conditionals": {
 							"behavior": 0,
 							"behavior_key": "Show",
@@ -1891,13 +1984,60 @@
 						"meta.facts_visible": false,
 						"meta.indent_level": 0,
 						"meta.is_head_editable": false,
-						"meta.line_index": 1,
+						"meta.line_index": 2,
 						"meta.selector": {
 							"selected": false
 						}
 					},
 					{
-						"address": "4.2",
+						"address": "4.3",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"delay_after": 0,
+							"delay_before": 0,
+							"line_reader.args": [
+								"shutter"
+							],
+							"line_reader.reverse_args": [],
+							"meta.has_reverse": false,
+							"meta.reverse_text": "",
+							"meta.text": "play_sfx(shutter)",
+							"meta.validation_status": "OK",
+							"name": "play_sfx",
+							"reverse_name": ""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 2,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 3,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "4.4",
 						"conditionals": {
 							"behavior": 0,
 							"behavior_key": "Show",
@@ -1936,7 +2076,7 @@
 						"meta.facts_visible": false,
 						"meta.indent_level": 0,
 						"meta.is_head_editable": false,
-						"meta.line_index": 2,
+						"meta.line_index": 4,
 						"meta.selector": {
 							"selected": false
 						}
