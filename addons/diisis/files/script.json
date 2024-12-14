@@ -12,8 +12,7 @@
 		],
 		"dropdowns": {
 			"character": [
-				"dii",
-				"sis"
+				"narrator"
 			]
 		},
 		"empty_strings_for_l10n": false,
@@ -29,15 +28,233 @@
 		},
 		"head_defaults": [],
 		"instruction_templates": {
-			"rotate": {
+			"black_fade": {
+				"arg_types": [
+					"float",
+					"float",
+					"float",
+					"bool",
+					"string",
+					"string"
+				],
+				"args": [
+					"fade_in",
+					"hold_time",
+					"fade_out",
+					"hide_characters",
+					"new_background",
+					"new_bgm"
+				]
+			},
+			"control_camera": {
+				"arg_types": [
+					"float",
+					"float",
+					"float",
+					"float"
+				],
+				"args": [
+					"zoom",
+					"x",
+					"y",
+					"duration"
+				]
+			},
+			"cum": {
+				"arg_types": [
+					"string"
+				],
+				"args": [
+					"voice"
+				]
+			},
+			"hide_all_characters": {
+				"arg_types": [],
+				"args": []
+			},
+			"hide_cg": {
+				"arg_types": [],
+				"args": []
+			},
+			"move_camera_to": {
+				"arg_types": [
+					"float",
+					"float",
+					"float"
+				],
+				"args": [
+					"x",
+					"y",
+					"duration"
+				]
+			},
+			"play_chapter_intro": {
+				"arg_types": [
+					"string",
+					"string",
+					"string",
+					"float",
+					"string"
+				],
+				"args": [
+					"pov_name",
+					"bottom_text",
+					"new_background",
+					"zoom",
+					"bgm"
+				]
+			},
+			"play_sfx": {
+				"arg_types": [
+					"string"
+				],
+				"args": [
+					"name"
+				]
+			},
+			"roll_credits": {
+				"arg_types": [],
+				"args": []
+			},
+			"set_background": {
+				"arg_types": [
+					"string",
+					"float"
+				],
+				"args": [
+					"name",
+					"fade_time"
+				]
+			},
+			"set_bgm": {
+				"arg_types": [
+					"string",
+					"float"
+				],
+				"args": [
+					"name",
+					"fade_in"
+				]
+			},
+			"set_character_name": {
+				"arg_types": [
+					"string",
+					"string"
+				],
+				"args": [
+					"character",
+					"name"
+				]
+			},
+			"set_emotion": {
+				"arg_types": [
+					"string",
+					"string"
+				],
+				"args": [
+					"actor_name",
+					"emotion_name"
+				]
+			},
+			"set_eye_progress": {
 				"arg_types": [
 					"float"
 				],
 				"args": [
-					"angle"
+					"value"
 				]
 			},
-			"show-character": {
+			"set_fade_out": {
+				"arg_types": [
+					"float",
+					"float"
+				],
+				"args": [
+					"lod",
+					"mix"
+				]
+			},
+			"set_object_visible": {
+				"arg_types": [
+					"string",
+					"bool"
+				],
+				"args": [
+					"object_name",
+					"visibility"
+				]
+			},
+			"set_static": {
+				"arg_types": [
+					"float"
+				],
+				"args": [
+					"level"
+				]
+			},
+			"set_sun": {
+				"arg_types": [
+					"string",
+					"float"
+				],
+				"args": [
+					"property",
+					"value"
+				]
+			},
+			"set_sun_str": {
+				"arg_types": [
+					"string",
+					"string"
+				],
+				"args": [
+					"property",
+					"value"
+				]
+			},
+			"set_text_style": {
+				"arg_types": [
+					"string"
+				],
+				"args": [
+					"style"
+				]
+			},
+			"set_x_position": {
+				"arg_types": [
+					"string",
+					"float",
+					"float",
+					"bool"
+				],
+				"args": [
+					"character_name",
+					"index",
+					"time",
+					"wait_for_reposition"
+				]
+			},
+			"shake_camera": {
+				"arg_types": [
+					"float"
+				],
+				"args": [
+					"strength"
+				]
+			},
+			"show_cg": {
+				"arg_types": [
+					"string",
+					"float",
+					"bool"
+				],
+				"args": [
+					"name",
+					"fade_in_time",
+					"continue_dialog_through_cg"
+				]
+			},
+			"show_character": {
 				"arg_types": [
 					"string",
 					"bool"
@@ -45,6 +262,54 @@
 				"args": [
 					"character_name",
 					"clear_others"
+				]
+			},
+			"show_letter": {
+				"arg_types": [],
+				"args": []
+			},
+			"splatter_blood": {
+				"arg_types": [
+					"float"
+				],
+				"args": [
+					"amount"
+				]
+			},
+			"sway_camera": {
+				"arg_types": [
+					"float"
+				],
+				"args": [
+					"intensity"
+				]
+			},
+			"use_ui": {
+				"arg_types": [
+					"float"
+				],
+				"args": [
+					"id"
+				]
+			},
+			"wound_fx": {
+				"arg_types": [
+					"float",
+					"float"
+				],
+				"args": [
+					"shake_intensity",
+					"splatter_count"
+				]
+			},
+			"zoom_to": {
+				"arg_types": [
+					"float",
+					"float"
+				],
+				"args": [
+					"value",
+					"duration"
 				]
 			}
 		},
@@ -138,6 +403,245 @@
 							"behavior_key": "Show",
 							"facts": {
 								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"delay_after": 0,
+							"delay_before": 0,
+							"line_reader.args": [
+								"default",
+								0
+							],
+							"line_reader.reverse_args": [],
+							"meta.has_reverse": false,
+							"meta.reverse_text": "",
+							"meta.text": "set_bgm(default,0)",
+							"meta.validation_status": "OK",
+							"name": "set_bgm",
+							"reverse_name": ""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 2,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 0,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "0.1",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"delay_after": 0,
+							"delay_before": 0,
+							"line_reader.args": [
+								"default",
+								0
+							],
+							"line_reader.reverse_args": [],
+							"meta.has_reverse": false,
+							"meta.reverse_text": "",
+							"meta.text": "set_background(default, 0)",
+							"meta.validation_status": "OK",
+							"name": "set_background",
+							"reverse_name": ""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 2,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 1,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "0.2",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"delay_after": 0,
+							"delay_before": 2,
+							"line_reader.args": [
+								"shutter"
+							],
+							"line_reader.reverse_args": [],
+							"meta.has_reverse": false,
+							"meta.reverse_text": "",
+							"meta.text": "play_sfx(shutter)",
+							"meta.validation_status": "OK",
+							"name": "play_sfx",
+							"reverse_name": ""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 2,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 2,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "0.3",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"delay_after": 2,
+							"delay_before": 0,
+							"line_reader.args": [
+								"start",
+								0,
+								true
+							],
+							"line_reader.reverse_args": [],
+							"meta.has_reverse": false,
+							"meta.reverse_text": "",
+							"meta.text": "show_cg(start, 0, true)",
+							"meta.validation_status": "OK",
+							"name": "show_cg",
+							"reverse_name": ""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 2,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 3,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "0.4",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"delay_after": 0,
+							"delay_before": 0,
+							"line_reader.args": [
+								"shutter"
+							],
+							"line_reader.reverse_args": [],
+							"meta.has_reverse": false,
+							"meta.reverse_text": "",
+							"meta.text": "play_sfx(shutter)",
+							"meta.validation_status": "OK",
+							"name": "play_sfx",
+							"reverse_name": ""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 2,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 4,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "0.5",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
 									"boy": {
 										"data_type": 0,
 										"fact_name": "boy",
@@ -172,12 +676,13 @@
 						},
 						"content": {
 							"auto_switch": true,
+							"choice_title": "",
 							"choices": [
 								{
-									"address": "0.0.0",
+									"address": "0.5.0",
 									"behavior_after_first_selection": 0,
 									"choice_text.disabled": "",
-									"choice_text.enabled": "there was a boy",
+									"choice_text.enabled": "boy",
 									"choice_text.enabled_as_default": true,
 									"conditionals": {
 										"behavior": 1,
@@ -186,9 +691,9 @@
 											"fact_data_by_name": {
 
 											},
-											"meta.visible": true
+											"meta.visible": false
 										},
-										"meta.visible": true,
+										"meta.visible": false,
 										"operand": 0,
 										"operand_args": [],
 										"operand_key": "AND"
@@ -198,10 +703,10 @@
 										"fact_data_by_name": {
 
 										},
-										"meta.visible": true
+										"meta.visible": false
 									},
 									"loopback": false,
-									"loopback_target_line": 1,
+									"loopback_target_line": 7,
 									"loopback_target_page": 0,
 									"meta.jump_page_before_auto_switch": true,
 									"meta.selector": {
@@ -225,13 +730,13 @@
 						"meta.facts_visible": false,
 						"meta.indent_level": 0,
 						"meta.is_head_editable": false,
-						"meta.line_index": 0,
+						"meta.line_index": 5,
 						"meta.selector": {
 							"selected": false
 						}
 					},
 					{
-						"address": "0.1",
+						"address": "0.6",
 						"conditionals": {
 							"behavior": 0,
 							"behavior_key": "Show",
@@ -248,12 +753,13 @@
 						},
 						"content": {
 							"auto_switch": false,
+							"choice_title": "at my feet, there lay a-",
 							"choices": [
 								{
-									"address": "0.1.0",
-									"behavior_after_first_selection": 0,
+									"address": "0.6.0",
+									"behavior_after_first_selection": 4,
 									"choice_text.disabled": "",
-									"choice_text.enabled": "there was a boy",
+									"choice_text.enabled": "boy",
 									"choice_text.enabled_as_default": true,
 									"conditionals": {
 										"behavior": 1,
@@ -291,9 +797,9 @@
 										"meta.visible": true
 									},
 									"loopback": false,
-									"loopback_target_line": 1,
+									"loopback_target_line": 7,
 									"loopback_target_page": 0,
-									"meta.jump_page_before_auto_switch": false,
+									"meta.jump_page_before_auto_switch": true,
 									"meta.selector": {
 										"selected": false
 									},
@@ -301,59 +807,8 @@
 									"target_page": 1
 								},
 								{
-									"address": "0.1.1",
-									"behavior_after_first_selection": 0,
-									"choice_text.disabled": "",
-									"choice_text.enabled": "girl",
-									"choice_text.enabled_as_default": true,
-									"conditionals": {
-										"behavior": 1,
-										"behavior_key": "Hide",
-										"facts": {
-											"fact_data_by_name": {
-												"girl": {
-													"data_type": 0,
-													"fact_name": "girl",
-													"fact_value": true,
-													"int_comparator": 0,
-													"int_operator": 0,
-													"is_conditional": true
-												}
-											},
-											"meta.visible": true
-										},
-										"meta.visible": true,
-										"operand": 0,
-										"operand_args": [],
-										"operand_key": "AND"
-									},
-									"do_jump_page": false,
-									"facts": {
-										"fact_data_by_name": {
-											"girl": {
-												"data_type": 0,
-												"fact_name": "girl",
-												"fact_value": true,
-												"int_comparator": 0,
-												"int_operator": 0,
-												"is_conditional": false
-											}
-										},
-										"meta.visible": true
-									},
-									"loopback": false,
-									"loopback_target_line": 1,
-									"loopback_target_page": 0,
-									"meta.jump_page_before_auto_switch": false,
-									"meta.selector": {
-										"selected": false
-									},
-									"target_line": 1,
-									"target_page": 0
-								},
-								{
-									"address": "0.1.2",
-									"behavior_after_first_selection": 0,
+									"address": "0.6.1",
+									"behavior_after_first_selection": 4,
 									"choice_text.disabled": "",
 									"choice_text.enabled": "faggot",
 									"choice_text.enabled_as_default": true,
@@ -378,7 +833,7 @@
 										"operand_args": [],
 										"operand_key": "AND"
 									},
-									"do_jump_page": false,
+									"do_jump_page": true,
 									"facts": {
 										"fact_data_by_name": {
 											"faggot": {
@@ -393,14 +848,65 @@
 										"meta.visible": true
 									},
 									"loopback": false,
-									"loopback_target_line": 1,
+									"loopback_target_line": 7,
 									"loopback_target_page": 0,
-									"meta.jump_page_before_auto_switch": false,
+									"meta.jump_page_before_auto_switch": true,
 									"meta.selector": {
 										"selected": false
 									},
-									"target_line": 1,
-									"target_page": 0
+									"target_line": 0,
+									"target_page": 3
+								},
+								{
+									"address": "0.6.2",
+									"behavior_after_first_selection": 4,
+									"choice_text.disabled": "",
+									"choice_text.enabled": "girl",
+									"choice_text.enabled_as_default": true,
+									"conditionals": {
+										"behavior": 1,
+										"behavior_key": "Hide",
+										"facts": {
+											"fact_data_by_name": {
+												"girl": {
+													"data_type": 0,
+													"fact_name": "girl",
+													"fact_value": true,
+													"int_comparator": 0,
+													"int_operator": 0,
+													"is_conditional": true
+												}
+											},
+											"meta.visible": true
+										},
+										"meta.visible": true,
+										"operand": 0,
+										"operand_args": [],
+										"operand_key": "AND"
+									},
+									"do_jump_page": true,
+									"facts": {
+										"fact_data_by_name": {
+											"girl": {
+												"data_type": 0,
+												"fact_name": "girl",
+												"fact_value": true,
+												"int_comparator": 0,
+												"int_operator": 0,
+												"is_conditional": false
+											}
+										},
+										"meta.visible": true
+									},
+									"loopback": false,
+									"loopback_target_line": 7,
+									"loopback_target_page": 0,
+									"meta.jump_page_before_auto_switch": true,
+									"meta.selector": {
+										"selected": false
+									},
+									"target_line": 0,
+									"target_page": 2
 								}
 							],
 							"meta.do_jump_page": true
@@ -417,13 +923,13 @@
 						"meta.facts_visible": false,
 						"meta.indent_level": 0,
 						"meta.is_head_editable": false,
-						"meta.line_index": 1,
+						"meta.line_index": 6,
 						"meta.selector": {
 							"selected": false
 						}
 					}
 				],
-				"meta.scroll_vertical": 362,
+				"meta.scroll_vertical": 0,
 				"meta.selected": false,
 				"next": 0,
 				"number": 0,
@@ -455,12 +961,60 @@
 							"operand_key": "AND"
 						},
 						"content": {
+							"delay_after": 0,
+							"delay_before": 0,
+							"line_reader.args": [
+								"boy1",
+								0,
+								true
+							],
+							"line_reader.reverse_args": [],
+							"meta.has_reverse": false,
+							"meta.reverse_text": "",
+							"meta.text": "show_cg(boy1, 0, true)",
+							"meta.validation_status": "OK",
+							"name": "show_cg",
+							"reverse_name": ""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 2,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 0,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "1.1",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
 							"active_actors": [
-								"dii",
-								"sis"
+								"narrator"
 							],
 							"active_actors_title": "character",
-							"content": "[]>dii:boy"
+							"content": "[]>narrator:Ever since he was able to think, his brain overflowed with suicide. Visions of his brains splattered on the floor.\n[]>narrator:Wondering if the 5th story of his apartment complex was high enough. First attempt at age 11. \n[]>narrator:Got raped at age 12. \n[]>narrator:Put a knife in someone's stomach at age 13.\n[]>narrator:Correctional facility.\n[]>narrator:Now, he's back out- probation.\n[]>narrator:Guess who won't get touched by a loved one ever again.\n[]>narrator:Still alive. For now.\n[]>narrator:He spends his time in dark alleyways, getting fucked by heterosexual men.\n[]>narrator:None of them consider him one.\n[]>narrator:Barely 17 but we both know he's older than that.\n[]>narrator:First attempt 6 years ago. Perpetual downward spiral. Won't be the only one.\n[]>narrator:The next one will be in three weeks after doing way too much molly.\n[]>narrator:You can guess how the rest of the story goes."
 						},
 						"facts": {
 							"fact_data_by_name": {
@@ -474,7 +1028,288 @@
 						"meta.facts_visible": false,
 						"meta.indent_level": 0,
 						"meta.is_head_editable": false,
-						"meta.line_index": 0,
+						"meta.line_index": 1,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "1.2",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"delay_after": 0,
+							"delay_before": 2,
+							"line_reader.args": [
+								"click"
+							],
+							"line_reader.reverse_args": [],
+							"meta.has_reverse": false,
+							"meta.reverse_text": "",
+							"meta.text": "play_sfx(click)",
+							"meta.validation_status": "OK",
+							"name": "play_sfx",
+							"reverse_name": ""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 2,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 2,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "1.3",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"delay_after": 0,
+							"delay_before": 0,
+							"line_reader.args": [
+								"boy2",
+								0,
+								true
+							],
+							"line_reader.reverse_args": [],
+							"meta.has_reverse": false,
+							"meta.reverse_text": "",
+							"meta.text": "show_cg(boy2, 0, true)",
+							"meta.validation_status": "OK",
+							"name": "show_cg",
+							"reverse_name": ""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 2,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 3,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "1.4",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"active_actors": [
+								"narrator"
+							],
+							"active_actors_title": "character",
+							"content": "[]>narrator:Life like this was never an option."
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 0,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 4,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "1.5",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"delay_after": 0,
+							"delay_before": 0,
+							"line_reader.args": [
+								"click"
+							],
+							"line_reader.reverse_args": [],
+							"meta.has_reverse": false,
+							"meta.reverse_text": "",
+							"meta.text": "play_sfx(click)",
+							"meta.validation_status": "OK",
+							"name": "play_sfx",
+							"reverse_name": ""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 2,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 5,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "1.6",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"delay_after": 0,
+							"delay_before": 0,
+							"line_reader.args": [
+								"boy3",
+								0,
+								false
+							],
+							"line_reader.reverse_args": [],
+							"meta.has_reverse": false,
+							"meta.reverse_text": "",
+							"meta.text": "show_cg(boy3, 0, false)",
+							"meta.validation_status": "OK",
+							"name": "show_cg",
+							"reverse_name": ""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 2,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 6,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "1.7",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"delay_after": 2,
+							"delay_before": 0,
+							"line_reader.args": [
+								"start",
+								0,
+								true
+							],
+							"line_reader.reverse_args": [],
+							"meta.has_reverse": false,
+							"meta.reverse_text": "",
+							"meta.text": "show_cg(start, 0, true)",
+							"meta.validation_status": "OK",
+							"name": "show_cg",
+							"reverse_name": ""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 2,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 7,
 						"meta.selector": {
 							"selected": false
 						}
@@ -512,12 +1347,60 @@
 							"operand_key": "AND"
 						},
 						"content": {
+							"delay_after": 0,
+							"delay_before": 0,
+							"line_reader.args": [
+								"girl1",
+								0,
+								true
+							],
+							"line_reader.reverse_args": [],
+							"meta.has_reverse": false,
+							"meta.reverse_text": "",
+							"meta.text": "show_cg(girl1, 0, true)",
+							"meta.validation_status": "OK",
+							"name": "show_cg",
+							"reverse_name": ""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 2,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 0,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "2.1",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
 							"active_actors": [
-								"dii",
-								"sis"
+								"narrator"
 							],
 							"active_actors_title": "character",
-							"content": "[]>dii:girl"
+							"content": "[]>narrator:It is a somewhat cold winter morning - abated by the radiator on full blast. She awakes, cuddled up with a friend she was banging.\n[]>narrator:Ate them out, got eaten out.\n[]>narrator:Bit them, got bruised.\n[]>narrator:Lots of kisses.\n[]>narrator:A good time.\n[]>narrator:We find her at some time in her 20s.\n[]>narrator:Cold winter sunlight flitters across the scars on both of their forearms - years old."
 						},
 						"facts": {
 							"fact_data_by_name": {
@@ -531,13 +1414,191 @@
 						"meta.facts_visible": false,
 						"meta.indent_level": 0,
 						"meta.is_head_editable": false,
-						"meta.line_index": 0,
+						"meta.line_index": 1,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "2.2",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"delay_after": 0,
+							"delay_before": 0,
+							"line_reader.args": [
+								"girl3",
+								0,
+								true
+							],
+							"line_reader.reverse_args": [],
+							"meta.has_reverse": false,
+							"meta.reverse_text": "",
+							"meta.text": "show_cg(girl3, 0, true)",
+							"meta.validation_status": "OK",
+							"name": "show_cg",
+							"reverse_name": ""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 2,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 2,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "2.3",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"active_actors": [
+								"narrator"
+							],
+							"active_actors_title": "character",
+							"content": "[]>narrator:\"Is it ok if I ask what you were in for?\"\n[]>narrator:\"Assault. - I think. I won't say I was too young to know.\"\n[]>narrator:A pause.\n[]>narrator:\"Do you think I'm irredeemable?\"\n[]>narrator:\"No.\""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 0,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 3,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "2.4",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"delay_after": 0,
+							"delay_before": 0,
+							"line_reader.args": [
+								"girl2",
+								0,
+								true
+							],
+							"line_reader.reverse_args": [],
+							"meta.has_reverse": false,
+							"meta.reverse_text": "",
+							"meta.text": "show_cg(girl2, 0, true)",
+							"meta.validation_status": "OK",
+							"name": "show_cg",
+							"reverse_name": ""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 2,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 4,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "2.5",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"active_actors": [
+								"narrator"
+							],
+							"active_actors_title": "character",
+							"content": "[]>narrator:There is gentleness and love in her - For one another.\n[]>narrator:Community found but recently.\n[]>narrator:Family.\n[]>narrator:A proper one.\n[]>narrator:You never stop being a faggot though. At some point it just becomes a mark of pride.\n[]>narrator:Girlfaggot.\n[]>narrator:Funny.\n[]>narrator:Feeling real for the first time because there is no question about what it ought to be."
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 0,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 5,
 						"meta.selector": {
 							"selected": false
 						}
 					}
 				],
-				"meta.scroll_vertical": 0,
+				"meta.scroll_vertical": 496,
 				"meta.selected": false,
 				"next": 0,
 				"number": 2,
@@ -569,12 +1630,60 @@
 							"operand_key": "AND"
 						},
 						"content": {
+							"delay_after": 0,
+							"delay_before": 0,
+							"line_reader.args": [
+								"faggot1",
+								0,
+								true
+							],
+							"line_reader.reverse_args": [],
+							"meta.has_reverse": false,
+							"meta.reverse_text": "",
+							"meta.text": "show_cg(faggot1, 0, true)",
+							"meta.validation_status": "OK",
+							"name": "show_cg",
+							"reverse_name": ""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 2,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 0,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "3.1",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
 							"active_actors": [
-								"dii",
-								"sis"
+								"narrator"
 							],
 							"active_actors_title": "character",
-							"content": "[]>dii:faggot"
+							"content": "[]>narrator:Got into bad shit too early. Family didn't know how to handle its coming out and other shit happened that does not concern you or me or it.\n[]>narrator:Dead past.\n[]>narrator:No future.\n[]>narrator:Very presently - Cut up forearms.\n[]>narrator:The faggot's hands are stained. Imagine whatever fluid is most repulsive to you. It has that on its tongue."
 						},
 						"facts": {
 							"fact_data_by_name": {
@@ -588,7 +1697,96 @@
 						"meta.facts_visible": false,
 						"meta.indent_level": 0,
 						"meta.is_head_editable": false,
-						"meta.line_index": 0,
+						"meta.line_index": 1,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "3.2",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"delay_after": 0,
+							"delay_before": 0,
+							"line_reader.args": [
+								"faggot2",
+								0,
+								true
+							],
+							"line_reader.reverse_args": [],
+							"meta.has_reverse": false,
+							"meta.reverse_text": "",
+							"meta.text": "show_cg(faggot2, 0, true)",
+							"meta.validation_status": "OK",
+							"name": "show_cg",
+							"reverse_name": ""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 2,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 2,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "3.3",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"active_actors": [
+								"narrator"
+							],
+							"active_actors_title": "character",
+							"content": "[]>narrator:It finds comfort in the other faggots, some of them faggots that are girls, some of them girls that are faggots.\n[]>narrator:Estrogen isn't the first injection this one does."
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 0,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 3,
 						"meta.selector": {
 							"selected": false
 						}
@@ -627,11 +1825,10 @@
 						},
 						"content": {
 							"active_actors": [
-								"dii",
-								"sis"
+								"narrator"
 							],
 							"active_actors_title": "character",
-							"content": "[]>dii:end"
+							"content": "[]>narrator:T4T is beautiful.\n[]>narrator:Esoteric queer sex is awesome."
 						},
 						"facts": {
 							"fact_data_by_name": {
@@ -646,6 +1843,100 @@
 						"meta.indent_level": 0,
 						"meta.is_head_editable": false,
 						"meta.line_index": 0,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "4.1",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"delay_after": 0,
+							"delay_before": 0,
+							"line_reader.args": [
+								"girlfaggot",
+								0,
+								false
+							],
+							"line_reader.reverse_args": [],
+							"meta.has_reverse": false,
+							"meta.reverse_text": "",
+							"meta.text": "show_cg(girlfaggot, 0, false)",
+							"meta.validation_status": "OK",
+							"name": "show_cg",
+							"reverse_name": ""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 2,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 1,
+						"meta.selector": {
+							"selected": false
+						}
+					},
+					{
+						"address": "4.2",
+						"conditionals": {
+							"behavior": 0,
+							"behavior_key": "Show",
+							"facts": {
+								"fact_data_by_name": {
+
+								},
+								"meta.visible": false
+							},
+							"meta.visible": false,
+							"operand": 0,
+							"operand_args": [],
+							"operand_key": "AND"
+						},
+						"content": {
+							"delay_after": 0,
+							"delay_before": 0,
+							"line_reader.args": [],
+							"line_reader.reverse_args": [],
+							"meta.has_reverse": false,
+							"meta.reverse_text": "",
+							"meta.text": "roll_credits()",
+							"meta.validation_status": "OK",
+							"name": "roll_credits",
+							"reverse_name": ""
+						},
+						"facts": {
+							"fact_data_by_name": {
+
+							},
+							"meta.visible": false
+						},
+						"header": [],
+						"line_type": 2,
+						"meta.conditionals_visible": false,
+						"meta.facts_visible": false,
+						"meta.indent_level": 0,
+						"meta.is_head_editable": false,
+						"meta.line_index": 2,
 						"meta.selector": {
 							"selected": false
 						}

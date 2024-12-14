@@ -42,7 +42,7 @@ func set_background(background:String, fade_time:=0.0, lmao := true):
 		path = str(CONST.BACKGROUND_ROOT, CONST.BACKGROUND_HOME_REGULAR)
 	var new_background:Node2D
 	var old_backgrounds:=$Background.get_children()
-	if path.ends_with(".png"):
+	if path.ends_with(".png") or path.ends_with(".jpg") or path.ends_with(".jpeg"):
 		new_background = Sprite2D.new()
 		new_background.texture = load(path)
 		new_background.centered = false
@@ -50,7 +50,7 @@ func set_background(background:String, fade_time:=0.0, lmao := true):
 	elif path.ends_with(".tscn"):
 		new_background = load(path).instantiate()
 	else:
-		push_error(str("Background ", background, " does not end in .png or .tscn."))
+		push_error(str("Background ", background, " does not end in .png, .jpg, .jpeg or .tscn."))
 		return
 	#new_background.modulate.a = 0.0
 	$Background.add_child(new_background)

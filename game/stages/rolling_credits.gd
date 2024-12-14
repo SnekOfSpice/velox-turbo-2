@@ -12,44 +12,38 @@ func _ready() -> void:
 	$White.visible = true
 	$Black.visible = true
 	$Label.visible = true
+	
+	for screen : Control in $Screens.get_children():
+		for part : TextureRect in screen.get_children():
+			part.visible = false
 
 func start():
+	Sound.play_sfx("shutter")
 	await get_tree().create_timer(1.0).timeout
-	Parser.line_reader.instruction_handler.set_sun("steps", 3.7)
-	await get_tree().create_timer(1.5).timeout
-	Parser.line_reader.instruction_handler.set_sun("fill_amount", 6.5)
-	await get_tree().create_timer(1.5).timeout
-	Parser.line_reader.instruction_handler.set_sun("steps", 1.8)
-	await get_tree().create_timer(0.5).timeout
+	#Parser.line_reader.instruction_handler.set_sun("steps", 3.7)
+	#await get_tree().create_timer(1.5).timeout
+	#Parser.line_reader.instruction_handler.set_sun("fill_amount", 6.5)
+	#await get_tree().create_timer(1.5).timeout
+	#Parser.line_reader.instruction_handler.set_sun("steps", 1.8)
+	#await get_tree().create_timer(0.5).timeout
 	
-	
-	var white_tween = create_tween()
-	white_tween.tween_property($White, "modulate:a", 1.0, 4.0)
-	
-	await white_tween.finished
-	
-	await get_tree().create_timer(1.0).timeout
-	
-	for line : String in LINES:
-		
-		$Label.text = line
-		
-		var fade = create_tween()
-		fade.tween_property($Label, "modulate:a", 1.0, 2.0)
-		await fade.finished
-		
-		await get_tree().create_timer(4.0).timeout
-		
-		fade = create_tween()
-		fade.tween_property($Label, "modulate:a", 0.0, 2.0)
-		await fade.finished
-		
-		await get_tree().create_timer(1.0).timeout
 	
 	var black_tween = create_tween()
-	black_tween.tween_property($Black, "modulate:a", 1.0, 6.0)
+	black_tween.tween_property($Black, "modulate:a", 1.0, 0.0)
+	Sound.play_sfx("shutter")
+	
 	await black_tween.finished
 	
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(3.0).timeout
 	
-	Parser.line_reader.instruction_handler.instruction_completed.emit()
+	for screen : Control in $Screens.get_children():
+		for part : TextureRect in screen.get_children():
+			await get_tree().create_timer(1).timeout
+			part.visible = true
+			Sound.play_sfx("click")
+		
+		if screen != $Screens.get_children().back():
+			await get_tree().create_timer(3).timeout
+			screen.visible = false
+			Sound.play_sfx("shutter")
+			await get_tree().create_timer(1).timeout

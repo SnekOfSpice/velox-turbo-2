@@ -1,6 +1,7 @@
-[gd_scene load_steps=47 format=3 uid="uid://r1ntcqdujfol"]
+[gd_scene load_steps=48 format=3 uid="uid://r1ntcqdujfol"]
 
 [ext_resource type="Script" path="res://game/stages/game_stage.gd" id="1_a36me"]
+[ext_resource type="Theme" uid="uid://cnkugfe1h4d43" path="res://velox-turbo-2-theme.tres" id="1_gd2fj"]
 [ext_resource type="Script" path="res://addons/diisis/parser/src/line_reader.gd" id="1_h4afo"]
 [ext_resource type="FontFile" uid="uid://dy8rsqmwhxjp6" path="res://addons/diisis/editor/visuals/fonts/TT Chocolates Trial Bold.otf" id="2_6jeks"]
 [ext_resource type="Script" path="res://game/stages/objects.gd" id="3_x2eff"]
@@ -19,7 +20,7 @@
 [ext_resource type="Shader" path="res://game/stages/one_fadeout.gdshader" id="15_heqc4"]
 [ext_resource type="Shader" path="res://game/stages/static.gdshader" id="17_dc0ef"]
 [ext_resource type="PackedScene" uid="uid://ipa310726xyt" path="res://game/stages/rolling_credits.tscn" id="17_gnute"]
-[ext_resource type="StyleBox" path="res://game/visuals/panel_transparent.tres" id="28_wvgc1"]
+[ext_resource type="StyleBox" uid="uid://v2vw23r324i2" path="res://game/visuals/panel_transparent.tres" id="28_wvgc1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3ca2q"]
 resource_local_to_scene = true
@@ -120,6 +121,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 2
+theme = ExtResource("1_gd2fj")
 script = ExtResource("1_a36me")
 
 [node name="Objects" type="Node2D" parent="."]
@@ -128,7 +130,7 @@ script = ExtResource("3_x2eff")
 [node name="Characters" type="Node2D" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(480, 270)
+position = Vector2(125, 125)
 script = ExtResource("9_lbjue")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="Camera2D"]
@@ -200,6 +202,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme = ExtResource("1_gd2fj")
 
 [node name="VNUI" type="Control" parent="Camera2D/CanvasLayer/VNUIRoot"]
 auto_translate_mode = 1
@@ -213,17 +216,16 @@ mouse_filter = 2
 
 [node name="TextContainer1" type="CenterContainer" parent="Camera2D/CanvasLayer/VNUIRoot/VNUI"]
 auto_translate_mode = 1
-custom_minimum_size = Vector2(454, 0)
+custom_minimum_size = Vector2(250, 0)
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -380.0
-offset_top = -234.0
-offset_right = 380.0
-offset_bottom = 15.0
+offset_left = -44.0
+offset_top = -44.0
+offset_right = 44.0
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
@@ -279,7 +281,7 @@ theme_override_constants/margin_bottom = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Camera2D/CanvasLayer/VNUIRoot/VNUI/TextContainer1/MarginContainer/VBoxContainer/MarginContainer2/Panel/MarginContainer"]
 auto_translate_mode = 1
-custom_minimum_size = Vector2(670, 121.41)
+custom_minimum_size = Vector2(215, 0)
 layout_mode = 2
 mouse_filter = 2
 theme_override_fonts/bold_font = ExtResource("2_6jeks")
@@ -289,6 +291,7 @@ fit_content = true
 scroll_active = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Camera2D/CanvasLayer/VNUIRoot/VNUI/TextContainer1/MarginContainer/VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 mouse_filter = 2
@@ -385,6 +388,7 @@ fit_content = true
 scroll_active = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Camera2D/CanvasLayer/VNUIRoot/VNUI/TextContainer2/MarginContainer/VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 mouse_filter = 2
@@ -405,6 +409,7 @@ stretch_mode = 2
 
 [node name="TextContainer3" type="CenterContainer" parent="Camera2D/CanvasLayer/VNUIRoot/VNUI"]
 auto_translate_mode = 1
+visible = false
 custom_minimum_size = Vector2(340, 0)
 layout_mode = 1
 anchors_preset = 6
@@ -503,7 +508,6 @@ stretch_mode = 2
 
 [node name="ChoiceContainer" type="PanelContainer" parent="Camera2D/CanvasLayer/VNUIRoot/VNUI"]
 auto_translate_mode = 1
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -511,12 +515,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ChoiceOptionContainer" type="VBoxContainer" parent="Camera2D/CanvasLayer/VNUIRoot/VNUI/ChoiceContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="Camera2D/CanvasLayer/VNUIRoot/VNUI/ChoiceContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Camera2D/CanvasLayer/VNUIRoot/VNUI/ChoiceContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Camera2D/CanvasLayer/VNUIRoot/VNUI/ChoiceContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ChoiceOptionContainer" type="VBoxContainer" parent="Camera2D/CanvasLayer/VNUIRoot/VNUI/ChoiceContainer/CenterContainer/VBoxContainer"]
 auto_translate_mode = 1
 layout_mode = 2
 size_flags_vertical = 4
 
 [node name="ControlsContainer" type="VBoxContainer" parent="Camera2D/CanvasLayer/VNUIRoot/VNUI"]
+visible = false
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -625,14 +639,16 @@ mouse_filter = 2
 [node name="InstructionHandler" type="Node" parent="."]
 script = ExtResource("4_u8vmc")
 
-[node name="LineReader" type="Control" parent="." node_paths=PackedStringArray("choice_container", "choice_option_container", "text_content", "text_container", "name_label", "name_container", "instruction_handler", "inline_evaluator", "prompt_unfinished", "prompt_finished")]
+[node name="LineReader" type="Control" parent="." node_paths=PackedStringArray("choice_container", "choice_option_container", "text_content", "text_container", "name_label", "name_container", "instruction_handler", "inline_evaluator", "choice_title_label", "prompt_unfinished", "prompt_finished")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
 script = ExtResource("1_h4afo")
+text_speed = 201.0
 auto_pause_duration = 0.4
+show_text_during_choices = false
 blank_names = Array[String](["narrator"])
 name_map = {
 "anhedonia": "Anhedonia",
@@ -651,14 +667,15 @@ name_colors = {
 "spectra": Color(0.157347, 0.679059, 0.74132, 1)
 }
 choice_container = NodePath("../Camera2D/CanvasLayer/VNUIRoot/VNUI/ChoiceContainer")
-choice_option_container = NodePath("../Camera2D/CanvasLayer/VNUIRoot/VNUI/ChoiceContainer/ChoiceOptionContainer")
+choice_option_container = NodePath("../Camera2D/CanvasLayer/VNUIRoot/VNUI/ChoiceContainer/CenterContainer/VBoxContainer/ChoiceOptionContainer")
 text_content = NodePath("../Camera2D/CanvasLayer/VNUIRoot/VNUI/TextContainer1/MarginContainer/VBoxContainer/MarginContainer2/Panel/MarginContainer/RichTextLabel")
 text_container = NodePath("../Camera2D/CanvasLayer/VNUIRoot/VNUI/TextContainer1")
 name_label = NodePath("../Camera2D/CanvasLayer/VNUIRoot/VNUI/TextContainer1/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/Label")
 name_container = NodePath("../Camera2D/CanvasLayer/VNUIRoot/VNUI/TextContainer1/MarginContainer/VBoxContainer/PanelContainer")
 instruction_handler = NodePath("../InstructionHandler")
 inline_evaluator = NodePath("../InstructionHandler")
-show_input_prompt = true
+show_choice_title = true
+choice_title_label = NodePath("../Camera2D/CanvasLayer/VNUIRoot/VNUI/ChoiceContainer/CenterContainer/VBoxContainer/Label")
 input_prompt_delay = 1.29
 input_prompt_lerp_weight = 0.233
 prompt_unfinished = NodePath("../Camera2D/CanvasLayer/VNUIRoot/VNUI/TextContainer1/MarginContainer/VBoxContainer/HBoxContainer/PageUnfinished")

@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://ipa310726xyt"]
+[gd_scene load_steps=9 format=3 uid="uid://ipa310726xyt"]
 
 [ext_resource type="Script" path="res://game/stages/rolling_credits.gd" id="1_cgvis"]
+[ext_resource type="Texture2D" uid="uid://dw2h30iqkt2ng" path="res://game/cg/death.png" id="2_lxphj"]
+[ext_resource type="Texture2D" uid="uid://cvm8mdtorct3r" path="res://game/cg/before.jpg" id="3_v8e8b"]
+[ext_resource type="Texture2D" uid="uid://ceep2ml8kdbla" path="res://game/cg/deathbeforedetransition.jpg" id="4_agrxt"]
+[ext_resource type="Texture2D" uid="uid://ckdbsyj6okq54" path="res://game/cg/we.jpg" id="5_2cr4x"]
+[ext_resource type="Texture2D" uid="uid://bdpc8c73188h2" path="res://game/cg/weprotect.jpg" id="6_ucoxk"]
+[ext_resource type="Texture2D" uid="uid://drhuiydp0knfh" path="res://game/cg/weprotectus.jpg" id="7_wckqg"]
+[ext_resource type="Texture2D" uid="uid://c68usw6xnyv3r" path="res://game/cg/weprotectus2.jpg" id="8_fb7ba"]
 
 [node name="RollingCredits" type="Control"]
 layout_mode = 3
@@ -48,8 +55,105 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0.54099, 0.54099, 0.54099, 1)
 theme_override_constants/shadow_offset_y = 0
 theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_outline_size = 0
 fit_content = true
+
+[node name="Screens" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="DeathBeforeDetransition" type="Control" parent="Screens"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Screens/DeathBeforeDetransition"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_lxphj")
+
+[node name="TextureRect2" type="TextureRect" parent="Screens/DeathBeforeDetransition"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_v8e8b")
+
+[node name="TextureRect3" type="TextureRect" parent="Screens/DeathBeforeDetransition"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_agrxt")
+
+[node name="WeProtectUs" type="Control" parent="Screens"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Screens/WeProtectUs"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_2cr4x")
+
+[node name="TextureRect2" type="TextureRect" parent="Screens/WeProtectUs"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_ucoxk")
+
+[node name="TextureRect3" type="TextureRect" parent="Screens/WeProtectUs"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_wckqg")
+
+[node name="TextureRect4" type="TextureRect" parent="Screens/WeProtectUs"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("8_fb7ba")

@@ -55,6 +55,7 @@ func _ready():
 	ParserEvents.instruction_started.connect(on_instruction_started)
 	ParserEvents.instruction_completed.connect(on_instruction_completed)
 	ParserEvents.read_new_line.connect(on_read_new_line)
+	ParserEvents.choices_presented.connect(on_choices_presented)
 	
 	GameWorld.instruction_handler = find_child("InstructionHandler")
 	GameWorld.game_stage = self
@@ -77,6 +78,18 @@ func _ready():
 
 func on_read_new_line(_line_index:int):
 	Options.save_gamestate()
+
+func on_choices_presented(choices:Array[Dictionary]):
+	for choice in choices:
+		var button : Button = choice.get("button")
+		if button.text.contains("boy"):
+			button.add_theme_stylebox_override("normal", load("res://game/visuals/button_panel_normal_boy.tres"))
+			button.add_theme_stylebox_override("hover", load("res://game/visuals/button_panel_hover_boy.tres"))
+			button.add_theme_stylebox_override("pressed", load("res://game/visuals/button_panel_pressed_boy.tres"))
+		if button.text.contains("faggot"):
+			button.add_theme_stylebox_override("normal", load("res://game/visuals/button_panel_normal_faggot.tres"))
+			button.add_theme_stylebox_override("hover", load("res://game/visuals/button_panel_hover_faggot.tres"))
+			button.add_theme_stylebox_override("pressed", load("res://game/visuals/button_panel_pressed_faggot.tres"))
 
 func on_tree_exit():
 	GameWorld.game_stage = null
@@ -131,8 +144,8 @@ func _input(event: InputEvent) -> void:
 		return
 	if event is InputEventKey:
 		if event.pressed:
-			if InputMap.action_has_event("ui_cancel", event):
-				GameWorld.stage_root.set_screen(CONST.SCREEN_OPTIONS)
+			#if InputMap.action_has_event("ui_cancel", event):
+				#GameWorld.stage_root.set_screen(CONST.SCREEN_OPTIONS)
 			if InputMap.action_has_event("screenshot", event):
 				var screenshot := get_viewport().get_texture().get_image()
 				var path := str("user://screenshot_", ProjectSettings.get_setting("application/config/name"), "_", Time.get_datetime_string_from_system().replace(":", "-"), ".png")
@@ -154,9 +167,9 @@ func _input(event: InputEvent) -> void:
 			if InputMap.action_has_event("cheats", event) and OS.has_feature("editor"):
 				find_child("Cheats").visible = not find_child("Cheats").visible
 				
-	if event is InputEventMouse:
-		if event.is_pressed() and InputMap.action_has_event("ui_cancel", event):
-			GameWorld.stage_root.set_screen(CONST.SCREEN_OPTIONS)
+	#if event is InputEventMouse:
+		#if event.is_pressed() and InputMap.action_has_event("ui_cancel", event):
+			#GameWorld.stage_root.set_screen(CONST.SCREEN_OPTIONS)
 
 	if event.is_action_pressed("advance"):
 		for root in cg_roots:
@@ -177,7 +190,7 @@ func hide_ui():
 
 func set_cg(cg_name:String, fade_in_duration:float, cg_root:Control):
 	var ui1panel : PanelContainer = find_child("TextContainer1").find_child("Panel")
-	ui1panel.add_theme_stylebox_override("panel", load("res://game/visuals/panel_transparent.tres"))
+	#ui1panel.add_theme_stylebox_override("panel", load("res://game/visuals/panel_transparent.tres"))
 	
 	cg_root.modulate.a = 0.0 if cg_root.get_child_count() == 0 else 1.0
 	#for c in cg_root.get_children():
@@ -189,7 +202,7 @@ func set_cg(cg_name:String, fade_in_duration:float, cg_root:Control):
 	var cg_node = TextureRect.new()
 	cg_root.add_child(cg_node)
 	cg_node.set_anchors_preset(Control.PRESET_FULL_RECT)
-	var cg_path := str("res://game/cg/", cg_name, ".png")
+	var cg_path := str("res://game/cg/", cg_name, ".jpg")
 	#ProjectSettings.load_resource_pack(cg_path)
 	cg_node.texture = load(cg_path)
 	var t = create_tween()
@@ -230,10 +243,11 @@ func hide_cg():
 		#cg_root.modulate.a = 0.0
 		if emit_insutrction_complete_on_cg_hide:
 			GameWorld.instruction_handler.instruction_completed.emit()
+			emit_insutrction_complete_on_cg_hide = false
 	
 	
 	var ui1panel : PanelContainer = find_child("TextContainer1").find_child("Panel")
-	ui1panel.add_theme_stylebox_override("panel", load("res://game/visuals/panel_opaque.tres"))
+	#ui1panel.add_theme_stylebox_override("panel", load("res://game/visuals/panel_opaque.tres"))
 	
 
 func on_actor_name_changed(
