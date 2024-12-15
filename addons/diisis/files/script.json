@@ -422,7 +422,7 @@
 							"line_reader.reverse_args": [],
 							"meta.has_reverse": false,
 							"meta.reverse_text": "",
-							"meta.text": "set_bgm(default,0)",
+							"meta.text": "set_bgm(default, 0)",
 							"meta.validation_status": "OK",
 							"name": "set_bgm",
 							"reverse_name": ""
@@ -975,7 +975,7 @@
 						}
 					}
 				],
-				"meta.scroll_vertical": 805,
+				"meta.scroll_vertical": 0,
 				"meta.selected": false,
 				"next": 0,
 				"number": 0,
